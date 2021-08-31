@@ -61,19 +61,19 @@ const Home = () => {
     {
       title: "Working with TestNG Listeners in Selenium Webdriver",
       body: "lorem ipsum...",
-      author: "Manul Wickramanayaka",
+      author: "Rick Grimes",
       id: 3,
     },
     {
       title: "How to Read/Write Data from Excel File-Apache POI",
       body: "lorem ipsum...",
-      author: "Manul Wickramanayaka",
+      author: "Rick Grimes",
       id: 3,
     },
     {
       title: "Logging with Apache Log4J",
       body: "lorem ipsum...",
-      author: "Manul Wickramanayaka",
+      author: "Rick Grimes",
       id: 3,
     },
   ]);
@@ -81,6 +81,10 @@ const Home = () => {
   return (
     <div className="home">
       <BlogList blogs={blogs} title="All Blogs" />
+      <BlogList
+        blogs={blogs.filter((blog) => blog.author == "Rick Grimes")}
+        title="Rick's Blogs"
+      />
     </div>
   );
 };
